@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Đăng nhập</title>
+    <script>
+        function check() {
+            var ff = document.getElementById("txtUsername").value;
+            if (ff == "") {
+                alert('Vui lòng nhập tên đăng nhập');
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        form{
+            width: 350px;
+            margin: 100px auto;
+            border: 1px solid;
+           padding: 10px;
+        }
+        input{
+            padding: 5px;
+            margin: 5px;
+        }
+        input[type=submit]{
+            width: 100px;
+            height: 35px;
+            margin-left: 230px;
+        }
+        input[type=reset] {
+            width: 100px;
+            height: 35px;
+            margin-left: 230px;
+            }
+        input[type=color]{
+            margin-left: 78px;
+        }
+        input[type=text]{
+            width: 198px;
+        }
+        span{
+            margin: 5px;
+        }
+        .btn{
+            text-align:left;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="All.aspx" onsubmit="return check();">
+        <span>Tên đăng nhập</span><input type="text" id="txtUsername" name="txtUsername" value="" /><br />
+        <span>Màu</span><input type="color" name="txtColor" style="height:50px"/><br/>
+        <div class="btn">
+            <input type="submit" value="Đăng nhập"/>
+            <input type="reset" value="Đặt lại" />
+        </div>
+    </form>
+</body>
+</html>
